@@ -1,0 +1,107 @@
+# linux_exp
+.
+├── 1
+│   ├── exp1
+│   ├── exp1.c
+│   ├── exp1.c~
+│   └── run.sh
+├── 2
+│   ├── exp2
+│   ├── exp2.c
+│   ├── exp2.c~
+│   └── run.sh
+├── 3
+│   ├── exp3
+│   ├── exp3.c
+│   ├── exp3.c~
+│   └── run.sh
+├── 4
+│   ├── exp4
+│   ├── exp4.c
+│   ├── exp4.c~
+│   └── run.sh
+├── 5
+│   ├── exp5
+│   ├── exp5.c
+│   ├── exp5.c~
+│   ├── run.sh
+│   └── run.sh~
+├── 6
+│   ├── exp6.c~
+│   ├── exp6read
+│   ├── exp6read.c
+│   ├── exp6read.c~
+│   ├── exp6write
+│   ├── exp6write.c
+│   ├── exp6write.c~
+│   ├── make.sh
+│   └── shmdata.h
+├── 7
+│   ├── exp7.c~
+│   ├── exp7_client
+│   ├── exp7_client.c
+│   ├── exp7_client.c~
+│   ├── exp7_server
+│   ├── exp7_server.c
+│   ├── exp7_server.c~
+│   └── make.sh
+├── doc
+│   ├── 3_1_me
+│   ├── 3_1_me.c
+│   ├── 6 new.pptx
+│   ├── exet1
+│   ├── exet1.c
+│   ├── folktext
+│   ├── folktext1
+│   ├── folktext1.c
+│   ├── folktext.c
+│   ├── hello
+│   ├── hello.c
+│   ├── helloworld
+│   ├── Linux编程作业.docx
+│   ├── Linux原理及应用01.ppt
+│   ├── Linux原理及应用02.ppt
+│   ├── Linux原理及应用03(1).ppt
+│   ├── Linux原理及应用04.ppt
+│   ├── Linux原理及应用07.ppt
+│   ├── Linux原理及应用08.ppt
+│   ├── Linux原理及应用09.ppt
+│   ├── Linux原理及应用10.ppt
+│   ├── Linux原理及应用11.ppt
+│   ├── Linux原理及应用12.ppt
+│   ├── Linux原理及应用13.ppt
+│   ├── Linux原理及应用14.ppt
+│   ├── msgqueue
+│   ├── msgqueue.c
+│   ├── msgrec
+│   ├── msgrec.c
+│   ├── msgrec.c~
+│   ├── msgsnd
+│   ├── msgsnd.c
+│   ├── msgsnd.c~
+│   ├── pipetest
+│   ├── pipetest.c
+│   ├── setitimer
+│   ├── setitimer.c
+│   ├── shmdata.h
+│   ├── shmdata.h.c
+│   ├── shmread
+│   ├── shmread.c
+│   ├── shmwrite
+│   ├── shmwrite.c
+│   ├── sigaction
+│   ├── sigaction.c
+│   ├── sigtest1
+│   ├── sigtest1.c
+│   └── sigtest1.c~
+├── README.md
+└── screenshot
+    ├── 1.png
+    ├── 2.png
+    ├── 3.png
+    ├── 4.png
+    ├── 5.png
+    ├── 6.png
+    └── 7.png
+
+9 directories, 94 files
