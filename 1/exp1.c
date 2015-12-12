@@ -28,7 +28,7 @@ int main(void)
     
     sigaction(SIGUSR1, &sa_usr, NULL);
     
-    printf("My PID is %d\n", getpid());
+    printf("My PID is %d\n", getpid()); //输出当前进程pid
     
     while(1)
     {

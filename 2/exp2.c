@@ -14,22 +14,22 @@
 //接收ctrl + c 与ctrl+ \信号
 void show_handler(int sig)
 {
-    if( sig == SIGINT){
+    if( sig == SIGINT){         //如果是ctrl +c 信号
         printf("\nI got signal id=%d, SIGINT\n", sig);
     }
     
-    if( sig == SIGQUIT){
+    if( sig == SIGQUIT){        //如果是ctrl+\ 信号
         printf("\nI got signal id=%d, SIGQUIT\n", sig);
     }
 }
 
 int main(void)
 {
-    int i = 0;
-    struct sigaction act, oldact;
-    act.sa_handler = show_handler;
+    int i = 0; //用来计数
+    struct sigaction act, oldact; 
+    act.sa_handler = show_handler; //定义信号处理函数
     sigaddset(&act.sa_mask, SIGQUIT);
-    act.sa_flags = SA_RESETHAND | SA_NODEFER; 
+    act.sa_flags = SA_RESETHAND | SA_NODEFER; //设置信号处理的其他相关操作 SA_RESETHAND  调用信号处理函数时，将信号的处理函数重置为缺省值SIG_DFL  SA_NODEFER ：一般情况下， 当信号处理函数运行时，内核将阻塞该给定信号。但是如果设置了 SA_NODEFER标记， 那么在该信号处理函数运行时，内核将不会阻塞该信号
 
     sigaction(SIGINT, &act, &oldact);
     sigaction(SIGQUIT, &act, &oldact);

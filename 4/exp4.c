@@ -30,7 +30,7 @@ struct msgbuff
 int main()  
 {  
     int msgid = msgget(IPC_PRIVATE,IPC_CREAT|0777);  
-    if(msgid<0)  
+    if(msgid<0)  //如果创建失败
     {  
         cout<<"create msg queue failed !"<<endl;  
     }  
@@ -38,18 +38,18 @@ int main()
     int cid = fork();  
     if(cid>0)  
     {  
-        msgbuff msg = {1,"I Like Linux!"};  
-        msgsnd(msgid,&msg,sizeof(msg),IPC_NOWAIT);  
+        msgbuff msg = {1,"I Like Linux!"};      //定义输出信息
+        msgsnd(msgid,&msg,sizeof(msg),IPC_NOWAIT);   //发送
           
         sleep(2);  
-        msgrcv(msgid,&msg,sizeof(msg),1,IPC_NOWAIT);  
-        cout<<msg.mtext<<endl;  
+        msgrcv(msgid,&msg,sizeof(msg),1,IPC_NOWAIT); //接收 
+        cout<<msg.mtext<<endl;  //输出消息
     }  
     else if(cid == 0)//子进程先收消息  
     {  
         msgbuff msg;  
         msgrcv(msgid,&msg,sizeof(msg),1,IPC_NOWAIT);  //从消息队列中读取消息
-        cout<<msg.mtext<<endl;   
+        cout<<msg.mtext<<endl;   //输出消息
           
         strcpy(msg.mtext,"I Like Linux ,too!");  
         msgsnd(msgid,&msg,sizeof(msg),IPC_NOWAIT);      //将一个新的消息写入队列
